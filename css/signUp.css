@@ -1,0 +1,154 @@
+* {
+	box-sizing: border-box;
+	
+}
+body {
+	min-height: 100vh;
+	min-width: 100vw;	
+}
+
+
+
+#container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	
+	
+}
+
+.contain {
+	padding: 10px;
+	float: left;
+	height: 100%;
+	
+}
+
+.left {
+	background: url(../images/background.png);
+	width: 60%;
+	border-right: 2px solid #F96D08;
+}
+
+.right {
+	background: none;
+	width: 40%;
+}
+
+.reg-p {
+	text-align: left;
+	font-size: 18px;
+	font-family: courier;
+}
+
+.create-acc {
+	color: #fefefe;
+	text-shadow: #590e5e 1px 3px;
+	font-size: 45px;
+}
+
+a {
+	text-decoration: none;
+	color: #F96D08;
+}
+
+input {
+  width: 50%;
+  margin: 8px 0;
+  border: 1px solid #F96D08;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-family: serif;
+  font-weight: bold;
+
+}
+
+input[type=submit] {
+  background: #F96D08;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 14px 16px;
+  cursor: pointer;
+  letter-spacing: 2px;
+
+}
+
+
+#alert {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 10px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+	border-radius: 5px;
+	}
+
+#alert.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@media screen and (max-width: 500px) {
+input {
+	width: 100%;
+	border: 1px solid #F96D08;
+	border-radius: 8px;
+	padding: 6px 10px;
+	font-family: serif;
+	font-weight: bold;
+
+}
+
+input[type=submit] {
+  background: #F96D08;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 7px 8px;
+  cursor: pointer;
+
+}
+
+
+.left {
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}
+
+}
