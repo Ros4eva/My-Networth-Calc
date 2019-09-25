@@ -49,7 +49,7 @@
 
 		  <div class="col-sm-4">
 		  	<div align="right">
-					<span><img src="images/arrow1.png" width="40" height="35"><a href="login.php" style="color: #F96D08;"> Create account?</a></span>
+					<span><img src="images/arrow1.png" width="40" height="35"><a href="signUp.php" style="color: #F96D08;"> Create account?</a></span>
 				</div>
 				<div align="center">
 					<h1 class="login-acc">Login</h1>
