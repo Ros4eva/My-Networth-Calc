@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-	<title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<title>Selene | Dashboard</title>
 </head>
 <body>
 	<div>
@@ -25,8 +25,9 @@
 
 			  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-			      <li class="nav-item active">
+			      <li class="home-btn">
 			        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+			      </li>
 			      </li>
 			      <li class="nav-item">
 			        <a class="nav-link" href="team.php">Our Team</a>
@@ -42,46 +43,7 @@
 			  </div>
 			</nav>
 		</div>
-		<div class="row">
-		  <div class="col-sm-8">
-		  
-		  </div>
-
-		  <div class="col-sm-4">
-		  	<div align="right">
-					<span><img src="images/arrow1.png" width="40" height="35"><a href="login.php" style="color: #F96D08;"> Create account?</a></span>
-				</div>
-				<div align="center">
-					<h1 class="login-acc">Login</h1>
-					<div >
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">To</h2></p>
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Check</h2></p>
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Your</h2></p>
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Networth</h2></p>
-					</div>
-					
-				</div>
-				  	<div id="loginForm" align="center">
-						<form name="loginForm" action="" method="post">
-
-						<div>
-							<input type="email" name="email" placeholder="Email">
-						</div>
-						<div>
-							<input type="password" name="password" placeholder="Password">
-						</div>
-
-						<div>
-							<span><p><a href="#">forgot password</a></p></span>
-						</div>
-
-						<div>
-							<input type="submit" name="submit" value="Login">
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+		
 		<footer class="page-footer font-small unique-color-dark">
 		  <div class="container text-center text-md-left mt-5">
 
@@ -97,12 +59,8 @@
 			      </div>
 			  </div>
  
-		      <!-- Grid column -->
-
-		      <!-- Grid column -->
 		      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
-		        <!-- Links -->
 		        <h6 class="text-uppercase font-weight-bold">Sponsors</h6>
 		        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 		        <p>
@@ -119,12 +77,8 @@
 		        </p>
 
 		      </div>
-		      <!-- Grid column -->
-
-		      <!-- Grid column -->
 		      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
-		        <!-- Links -->
 		        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
 		        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 		        <p>
@@ -137,13 +91,10 @@
 		          <a href="about.php">About Us</a>
 		        </p>
 		        <p>
-		          <a href="#!">Help</a>
+		          <a href="#">Help</a>
 		        </p>
 
 		      </div>
-		      <!-- Grid column -->
-
-		      <!-- Grid column -->
 		      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
 		        <!-- Links -->
@@ -187,10 +138,8 @@
 		  </div>
 		  <div class="footer-copyright text-center py-3">&#169; 2019 Team Selene
 		  </div>
-		  <!-- Copyright -->
 
 		</footer>
-		<!-- Footer -->
 	</div>
 
 	<div>
