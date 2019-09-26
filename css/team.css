@@ -17,6 +17,24 @@ body {
 	font-family: cursive;
 }
 
+.our-team h2 {
+	color: #6b3a28;
+	text-align: center;
+	font-family: impact, san-serif, george;
+	margin-top: 20px;
+
+}
+
+.our-team h6 {
+	font-family: courier;
+	font-style: italic;
+	letter-spacing: 2;
+	line-height: 2;
+	margin: 30px;
+	padding: 10px;
+	border: 1px solid #F96D08;;
+}
+
 footer {
 	background: #2c3645; 
 	padding-top: 5px;
@@ -51,4 +69,21 @@ body {
 	 
 }
 
+}
+
+.team-member img{
+	border: 2px solid grey;
+	border-radius: 50px 50px;
+	width: 145px;
+	height: 190px;
+}
+
+.team-member h3 {
+	font-family: script;
+	font-weight: bold;
+	margin: 8px
+}
+
+.col {
+	border-right: 5px;
 }
