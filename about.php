@@ -48,6 +48,49 @@
 			  </div>
 			</nav>
 		</div>
+
+		<div class="about-us">
+			<h2>About Selene Networth Calculator</h2>
+
+			<h6>Selene Net Worth Calculator is one of the greatest tool of our current Technology age, built with one of the latest world greatest quantuem computer. Our technology is one of the best of its kind highly equipped with the highest level of AI that doesn't only read but also predicts stock market worldwide. </h6>
+
+			<h6>We collect your financial information like your cash at hand and account balances, your assets, laibilities, cash or cheque or credit card debts, with the the help of our mind blowing, unimaginable level of intelligence in maths calculation, our algorithm gives you feedback based on your total debts, total liabilities, total cash available and estimated value of your assets in the current time despit the area it is located. sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit</h6>
+
+			<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit .</h6>
+
+		</div>
+
+		<div class="contact-us-form" align="center">
+			<div id="id01" class="modal">
+  
+  				<form name="myForm" class="modal-content animate" action="#" method="post">
+    				
+
+    				<div class="container">
+    					<h3>Get In Touch With Us</h3>
+      					<input type="text" placeholder="Full Name" name="fname" required>
+
+      					<input type="email" placeholder="Email Address" name="email" required>
+
+
+      					<textarea type="text" placeholder="Message" name="msg" ></textarea>
+        
+      					<button type="submit" name="submit">Send Message</button>
+     
+    				</div>
+  				</form>
+			</div>
+
+			<div class="contact">
+				<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Contact Us</button>	
+			</div>
+		</div>
 		
 		<footer class="page-footer font-small unique-color-dark">
 		  <div class="container text-center text-md-left mt-5">
@@ -148,7 +191,7 @@
 	</div>
 
 	<div>
-		<script src="js/signUp.js"></script>
+		<script src="js/about.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
