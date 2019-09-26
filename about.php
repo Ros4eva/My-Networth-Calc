@@ -26,7 +26,7 @@
 			  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 			      <li class="home-btn">
-			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="signUp-btn">
 			        <a class="nav-link" href="signUp.php">Sign Up</a>

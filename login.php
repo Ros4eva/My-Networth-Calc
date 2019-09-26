@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['user']))
+{
+    header("Location:dashboard.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,6 +80,10 @@
 
 						<div>
 							<span><p><a href="#">forgot password</a></p></span>
+						</div>
+
+						<div>
+							<p id="error-message"></p>
 						</div>
 
 						<div>
@@ -199,7 +210,37 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</div>
+	<?php
+	if(isset($_POST['submit']))  
+	{
+	     $email = $_POST['email'];
+	     $pass = $_POST['password'];
 
+	    if(isset($_POST["submit"])){
+	    $file = fopen('data.json', 'r');
+	    $good=false;
+	    while(!feof($file)){
+	        $line = fgets($file);
+	        $array = explode("|", $line);
+	    if(trim($array[1]) == $_POST['email'] && trim($array[3]) == $_POST['password']){
+	            $good=true;
+	            break;
+	        }
+	    }
 
+	    if($good){
+	    $_SESSION['user'] = $email;
+	        echo '<script type="text/javascript"> window.open("dashboard.php","_self");</script>';  
+	    }else{
+	        echo "<script> document.getElementById('error-message').innerHTML = 'Email or password incorrect'</script>";
+	    }
+	    fclose($file);
+	    }
+	    else{
+	        return "login.php";
+	    }
+
+	}
+?>
 </body>
 </html>
