@@ -84,7 +84,7 @@ else
             ===================-->
             <div class="dashboard__right__contents">
                 <h3>Welcome Back</h3>
-                <i style="font-family: courier; font-weight: bold; color: grey;">achillesusuoyibo@gmail.com</i><br>
+                <i style="font-family: courier; font-weight: bold; color: grey;"><?php echo $_SESSION['user'];?></i><br>
 
                 <small>Take control of your assets and liabilities and get a sense of your financial worth!</small>
                 <div class="financial__info">
