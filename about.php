@@ -55,7 +55,7 @@
 			<h6>Selene Net Worth Calculator is one of the greatest tool of our current Technology age, built with one of the latest world greatest quantuem computer. Our technology is one of the best of its kind highly equipped with the highest level of AI that doesn't only read but also predicts stock market worldwide. </h6>
 
 			<h6>We collect your financial information like your cash at hand and account balances, your assets, laibilities, cash or cheque or credit card debts, with the the help of our mind blowing, unimaginable level of intelligence in maths calculation, our algorithm gives you feedback based on your total debts, total liabilities, total cash available and estimated value of your assets in the current time despit the area it is located. sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			tempor incididunt ut labore et dolore agna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit</h6>
 
