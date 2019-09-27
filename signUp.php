@@ -152,16 +152,16 @@ if(isset($_SESSION['user']))
 		        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
 		        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 		        <p>
-		          <a href="#!">Login</a>
+		          <a href="login.php">Login</a>
 		        </p>
 		        <p>
-		          <a href="#!">Sign Up</a>
+		          <a href="signUp.php">Sign Up</a>
 		        </p>
 		        <p>
-		          <a href="#!">About Us</a>
+		          <a href="about.php">About Us</a>
 		        </p>
 		        <p>
-		          <a href="#!">Help</a>
+		          <a href="about.php#contact">Help</a>
 		        </p>
 
 		      </div>

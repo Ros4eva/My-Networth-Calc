@@ -213,7 +213,7 @@
 		          <a href="about.php">About Us</a>
 		        </p>
 		        <p>
-		          <a href="#!">Help</a>
+		          <a href="about.php#contact">Help</a>
 		        </p>
 
 		      </div>

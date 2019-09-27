@@ -50,7 +50,68 @@
 		</div>
 		<div>
 
-		
+			<div>
+				<div class="text-center index1">
+					<button>Your Networth</button>
+				  	<img src="images/index1.jpg" class="rounded" alt="...">
+				  	<button>$184,000.00</button>				  
+				</div>
+
+				<div class="container index2-pa" align="center">
+				  <div class="row">
+				    <div class="col-{breakpoint}-auto">
+				    	<div class="image-container">
+				    		<img src="images/index2.jpg" class="image1">
+				    		<div class="overlay">
+				    			<div class="text">
+				    				<h4>What We Do!</h4>
+				    			</div>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="col-sm">
+				      <h3 align="center">WE ARE SELENE NETWORTH CALCULATOR</h3>
+				    </div>
+				    <div class="col-{breakpoint}-auto">
+				    	<div class="image-container">
+				    		<img src="images/index2.jpg" class="image2">
+				    		<div class="overlay">
+				    			<div class="text">
+				    				<h4>Why Selene is the Best Networth Calculator!</h4>
+				    			</div>
+				    		</div>
+				    	</div>
+				    </div>
+				  </div>
+				</div>
+				<div align="center" class="how-it-works">
+					<h2>How it works!</h2>
+					<div class="container">
+					  <div class="row">
+					    <div class="col">
+					    	<img src="images/file.png" width="70" height="70">
+					    	<p>We collet your information</p>
+					    </div>
+					    <div class="col">
+					    	<img src="images/right-arrow.png" width="70" height="70">
+					    </div>
+					    <div class="col">
+					    	<img src="images/clock.png" width="70" height="70">
+					    	<p>Analyse and calculate, then send your networth</p>
+					    </div>
+					    <div class="col">
+					    	<img src="images/right-arrow.png" width="70" height="70">
+					    </div>
+					    <div class="col">
+					    	<img src="images/chat.png" width="70" height="70">
+					    	<p>You can also get financial advice from Us</p>
+					    </div>
+					  </div>
+					</div>
+					<a href="signUp.php"><button><h4>Get Started</h4></button></a>
+				</div>
+				
+
 		<footer class="page-footer font-small unique-color-dark">
 		  <div class="container text-center text-md-left mt-5">
 
@@ -89,16 +150,16 @@
 		        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
 		        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 		        <p>
-		          <a href="#!">Login</a>
+		          <a href="login.php">Login</a>
 		        </p>
 		        <p>
-		          <a href="#!">Sign Up</a>
+		          <a href="signUp.php">Sign Up</a>
 		        </p>
 		        <p>
-		          <a href="#!">About Us</a>
+		          <a href="about.php">About Us</a>
 		        </p>
 		        <p>
-		          <a href="#!">Help</a>
+		          <a href="about.php#contact">Help</a>
 		        </p>
 
 		      </div>

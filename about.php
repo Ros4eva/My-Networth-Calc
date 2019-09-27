@@ -87,7 +87,7 @@
   				</form>
 			</div>
 
-			<div class="contact">
+			<div id="contact">
 				<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Contact Us</button>	
 			</div>
 		</div>
@@ -139,7 +139,7 @@
 		          <a href="about.php">About Us</a>
 		        </p>
 		        <p>
-		          <a href="#!">Help</a>
+		          <a href="about.php#contact">Help</a>
 		        </p>
 
 		      </div>
