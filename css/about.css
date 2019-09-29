@@ -30,14 +30,14 @@ footer {
 
 .footer-contact input{
   	margin: 8px 0;
-  	border: #F96D08;
+  	border: #23C1CF;
   	border-radius: 8px;
   	padding: 10px 20px;
   	font-family: serif;
 }
 
 .footer-contact input[type=submit]{
-	background: #F96D08;
+	background: #23C1CF;
   	border: none;
   	border-radius: 8px;
   	color: white;
@@ -88,7 +88,7 @@ footer {
 .contact-us-form input, textarea {
   width: 100%;
   margin: 8px 0;
-  border: 1px solid #F96D08;
+  border: 1px solid #23C1CF;
   border-radius: 8px;
   padding: 12px 20px;
   font-family: serif;
@@ -98,7 +98,7 @@ footer {
 
 .contact-us-form button {
 	width: 100%;
-  	background: #F96D08;
+  	background: #23C1CF;
   	border: none;
   	border-radius: 8px;
   	color: white;

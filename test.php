@@ -1,97 +1,36 @@
 <?php
-session_start();
-if (! empty($_SESSION['user']))
-{
-  
-}
-else
-{
-    header("location: login.php");
-}
-?>
 
-<?php
-
-    if(isset($_POST['calAssets']))
+    if(isset($_POST['calLiab']))
     {
-      if(isset($_POST['calAssets']))
-      {
-        $user = $_SESSION['user'];
-        $assetsCash = $_POST['assetsCash'];
-        $assetsBusiness = $_POST['assetsBusiness'];
-        $assetsEstate = $_POST['assetsEstate'];
-        $assetsInvestment = $_POST['assetsInvestment'];
-        $assetsSavings = $_POST['assetsSavings'];
-        $assetsInsurance = $_POST['assetsInsurance'];
-        $assetsProperty = $_POST['assetsProperty'];
-
-        $totalAssets = $assetsCash + $assetsBusiness + $assetsEstate + $assetsInvestment + $assetsSavings + $assetsInsurance + $assetsProperty;
-
-        $assetsfileType = "assetsFor$user.txt";
-        $assetsfile = fopen($assetsfileType, "w");
-        fputs($assetsfile, $totalAssets);       
-        fclose($assetsfile);
-      }
-
-    }
-
-    if (isset($_POST['calLiab']))
-    {
-      if(isset($_POST['calLiab']))
-      {
-        $user = $_SESSION['user'];
-        $debts = $_POST['debts'];
-        $bills = $_POST['bills'];
-        $otherDebts = $_POST['otherDebts'];
-        
-
-        $totalLiabilities = $debts + $bills + $otherDebts;
-
-        $liabilitiesFileType = "liabilitiesFor$user.txt";
-        $liabilitiesfile = fopen($liabilitiesFileType, "w");
-        fputs($liabilitiesfile, $totalLiabilities);
-        fclose($liabilitiesfile);
-
-      }
-    }
-
-    if (isset($_POST['networth']))
-    {
-      if(isset($_POST['networth']))
-      {
-
-        $user = $_SESSION['user'];
-        $cash = $_POST['cash'];
-        $business = $_POST['business'];
-        $estate = $_POST['estate'];
-        $investment = $_POST['investments'];
-        $savings = $_POST['savings'];
-        $insurance = $_POST['insurance'];
-        $property = $_POST['property'];
+      $user = $_SESSION['user'];
+      $cash = $_POST['cash'];
+      $business = $_POST['business'];
+      $estate = $_POST['estate'];
+      $investment = $_POST['investments'];
+      $savings = $_POST['savings'];
+      $insurance = $_POST['insurance'];
+      $property = $_POST['property'];
 
       
-        $netdebts = $_POST['netDebt'];
-        $netbills = $_POST['netBills'];
-        $others = $_POST['others'];
+	  $netdebts = $_POST['netdebts'];
+	  $netbills = $_POST['netbills'];
+	  $others = $_POST['others'];
 
-        $totalLiabilities = $netdebts + $netbills + $others;
+	  $totalLiabilities = $netdebts + $netbills + $others;
       
 
-        $totalAsset = $cash + $business + $estate + $investment + $savings + $insurance + $property;
+      $totalAsset = $cash + $business + $estate + $investment + $savings + $insurance + $property;
 
-        $totalNetworth = $totalAsset - $totalLiabilities;
+      $totalNetworth = $totalAsset - $totalLiabilities;
 
-        $networthFileType = "networthFor$user.txt";
-        $networthfile = fopen($networthFileType, "w");
-        fputs($networthfile, $totalNetworth);
-        fclose($networthfile);
+      $networthFileType = "networthFor$user.txt";
+      $networthfile = fopen($networthFileType, "w");
+      fputs($networthfile, $totalNetworth);
+      fclose($networthfile);
 
-      }
+     
     }
-
-  
-
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -113,7 +52,7 @@ else
         </div>
 
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #23C1CF;">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F96D08;">
               <a class="navbar-brand" href="#">Selene</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -167,47 +106,36 @@ else
             ===================-->
             <div class="dashboard__right__contents">
                 <h3>Welcome Back</h3>
-                <i style="font-family: courier; font-weight: bold; color: grey;"><?php echo $_SESSION['user'];?></i><br>
+                <i style="font-family: courier; font-weight: bold; color: grey;"></i><br>
 
                 <small>Take control of your assets and liabilities and get a sense of your financial worth!</small>
                 <div class="financial__info">
                     <div class="financial__card assets">
                         <h4>Total Assets</h4>
-                        <p>&#8358;
-                          <?php 
-                            $user = $_SESSION['user'];
-                            $assetsFileOfUser = "assetsFor$user.txt";
-                            $file = fopen($assetsFileOfUser,"r") or die ("00");
-                            echo fgets($file);
-                            fclose($file);
-                            ?>
-                        </p>
+                        <p>&#8358; 
+                        	<?php $file = fopen("database.txt", "r");
+			            
+				            while(!feof($file))
+				            {
+				                $line = fgets($file);
+				                $array = explode("|", $line);
+				                if(trim($array[1]) == "prosper.sopuruchi@gmail.com")
+				                {
+				                    echo "$array[3]";
+				                    break;
+				                }
+				            }
+				            fclose($file); ?>
+			            	
+			            </p>
                     </div>
                     <div class="financial__card liabilities">
                             <h4>Total Liabilities</h4>
-                            <p>&#8358;
-
-                              <?php 
-                                $user = $_SESSION['user'];
-                                $liabilitiesFileOfUser = "liabilitiesFor$user.txt";
-                                $file = fopen($liabilitiesFileOfUser,"r") or die ("00");
-                                echo fgets($file);
-                                fclose($file);
-                              ?>
-                              
-                            </p>
+                            <p>&#8358; 00.00</p>
                         </div>
                         <div class="financial__card assets">
-                                <h4>Total Networth</h4>
-                                <p>&#8358;
-                                  <?php 
-                                    $user = $_SESSION['user'];
-                                    $networthFileOfUser = "networthFor$user.txt";
-                                    $file = fopen($networthFileOfUser,"r") or die ("00");
-                                    echo fgets($file);
-                                    fclose($file);
-                                  ?>
-                                </p>
+                                <h4>Total Assets</h4>
+                                <p>&#8358; 00.00</p>
                             </div>
                 </div>
             </div>
@@ -227,7 +155,6 @@ else
                   <div class="assets__contents">
                           <h5>Businesses</h5>
                           <input type="number" name="assetsBusiness" value="00">
-
                       </div>
                       <div class="assets__contents">
                               <h5>Real Estate</h5>
@@ -252,12 +179,12 @@ else
                                           <div class="assets__contents">
                                                   <input type="submit" name="calAssets" class="calculate__btn" value="Calculate Total">
                                                   <h4 style="color: grey;">
-                                                    <?php 
-                                                    $user = $_SESSION['user'];
-                                                    $assetsFileOfUser = "assetsFor$user.txt";
-                                                    $file = fopen($assetsFileOfUser,"r");
-                                                    echo "You currently have ".fgets($file). " in Assets";
-                                                    ?>
+                                                  	<?php 
+                                                  	$user = "prosper.sopuruchi@gmail.com";
+                                                  	$fileuser = "$user.txt";
+                                                  	$file = fopen($fileuser,"r");
+                                                  	echo "You currently have ".fgets($file). " in Assets";
+                                                  	?>
                                                   </h4>
                                               </div>
                 </div>
@@ -268,110 +195,89 @@ else
             <!--Laiability section begins here
             ==============================-->
             <div class="liabilities__wrapper">
-              <form name="liabilityForm" method="post">
                     <h3>Liabilities</h3>
                     <small>These are the things that takes money away from you. Try to limit them.</small>
                     <div class="liabilities__card">
                             <div class="liability__contents">
                                     <h5>Debts</h5>
-                                    <input type="number" name="debts" value="00">
+                                    <input type="number" id="property">
                                 </div>
                                 <div class="liability__contents">
                                         <h5>Bills Due</h5>
-                                        <input type="number" name="bills" value="00">
-                                    </div>
-                                    <div class="liability__contents">
-                                        <h5>Other Debts</h5>
-                                        <input type="number" name="otherDebts" value="00">
+                                        <input type="number" id="property">
                                     </div><br />
                                 <div class="liability__contents">
-                                        <input type="submit" name="calLiab" class="liabilities__btn" value="Calculate Total Liabilities">
-                                        <h4 style="color: grey;">
-                                            <?php 
-                                            $user = $_SESSION['user'];
-                                            $liabilitiesFileOfUser = "liabilitiesFor$user.txt";
-                                            $file = fopen($liabilitiesFileOfUser,"r");
-                                            echo "You currently have ".fgets($file). " in Liabilities";
-                                            ?>
-                                          </h4>
+                                        <button class="liabilities__btn">Calculate Total</button>
+                                        <input type="number" id="total">
                                     </div>
                     </div>
-                  </form>
             </div>
             <!--End of Lability section
             =============================-->
             <!--Networth Calculator section
             ===============================-->
             <div class="networth__wrapper">
-              <form name="networthForm" method="post">
                 <h3>Networth Calculator</h3>
                 <small>Please enter the money value of your assets and liabilities to find your networth</small>
                 <div class="networth__content">
-                    <div class="assets__form">
+                    <form class="assets__form">
                         <div class="cash">
                             <label for="cash">Cash</label><br />
-                            <input type="number" placeholder="&#8358; 00.00" name="cash" value="00">
+                            <input type="number" placeholder="&#8358; 00.00" name="cash">
                         </div>
                     <div class="business">
                             <label for="cash">Business</label><br />
-                            <input type="number" placeholder="&#8358; 00.00" name="business" value="00">
+                            <input type="number" placeholder="&#8358; 00.00" name="business">
                         </div>
                         <div class="extate">
                                 <label for="cash">Real Estate</label><br />
-                                <input type="number" placeholder="&#8358; 00.00" name="estate" value="00">
+                                <input type="number" placeholder="&#8358; 00.00" name="real_estate">
                             </div>
                             <div class="investments">
                                     <label for="cash">Other Investments</label><br />
-                                    <input type="number" placeholder="&#8358; 00.00" name="investments" value="00">
+                                    <input type="number" placeholder="&#8358; 00.00" name="investments">
                                 </div>
                                 <div class="savings">
                                         <label for="cash">Retirement Savings</label><br />
-                                        <input type="number" placeholder="&#8358; 00.00" name="savings" value="00">
+                                        <input type="number" placeholder="&#8358; 00.00" name="savings">
                                     </div>
                                     <div class="insurance">
                                             <label for="cash">Life Insurance</label><br />
-                                            <input type="number" placeholder="&#8358; 00.00" name="insurance" value="00">
+                                            <input type="number" placeholder="&#8358; 00.00" name="insurance">
                                         </div>
                                         <div class="property">
                                                 <label for="cash">Property</label><br />
-                                                <input type="number" placeholder="&#8358; 00.00" name="property" value="00">
+                                                <input type="number" placeholder="&#8358; 00.00" name="property">
                                             </div>
-                                            
-                    </div>
-                    <div class="liability__form">
+                                            <div class="total">
+                                                    <label for="cash">Total</label><br />
+                                                    <input type="number" placeholder="&#8358; 00.00" name="asset__total" class="total__input">
+                                                </div>
+                    </form>
+                    <form class="liability__form">
                         <div class="debt">
-                            <label for="debt">Debt</label><br>
-                            <input type="number" placeholder="&#8358; 00.00" name="netDebt" value="00">
+                            <label for="debt">Debt</label>
+                            <input type="number" placeholder="&#8358; 00.00" name="debt">
                         </div>
                         <div class="bills">
-                                <label for="debt">Bills</label><br>
-                                <input type="number" placeholder="&#8358; 00.00" name="netBills" value="00">
+                                <label for="debt">Bills</label>
+                                <input type="number" placeholder="&#8358; 00.00" name="debt">
                             </div>
-                            <div class="bills">
-                                <label for="debt">Other Debts or Bills</label><br>
-                                <input type="number" placeholder="&#8358; 00.00" name="others" value="00">
-                            </div>
-                            <input type="submit" name="networth" class="calculate__btn" value="Calculate">
-                            <div class="result">
-                              <h4>Your Total Networth is</h4>
-                              <p>&#8358;
-                                <h4 style="color: grey;">
-                                    <?php 
-                                    $user = $_SESSION['user'];
-                                    $networthFileOfUser = "networthFor$user.txt";
-                                    $file = fopen($networthFileOfUser,"r");
-                                    echo fgets($file);
-                                    ?>
-                                  </h4>                                 
-                              </p>
-                            </div>
-                    </div>
+                            <div class="total">
+                                    <label for="debt">Total</label>
+                                    <input type="number" placeholder="&#8358; 00.00" name="liability__total" class="total__input">
+                                </div>
+                                <button class="calculate__btn">Calculate</button>
+                                <div class="result">
+                                <h4>Your Networth is</h4>
+                                <p>&#8358; 00.00</p>
+                                </div>
+                    </form>
                 </div>
                 </div>
             </div>
         </div>
     </div>
-</form>
 </div>
 
     <footer class="page-footer font-small unique-color-dark">

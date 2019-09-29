@@ -24,7 +24,7 @@ if(isset($_SESSION['user']))
 		</div>
 
 		<div>
-			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F96D08;">
+			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #23C1CF;">
 			  <a class="navbar-brand" href="#">Selene</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@ if(isset($_SESSION['user']))
 
 		  <div class="col-sm-4">
 		  	<div align="right">
-					<span><img src="images/arrow1.png" width="40" height="35"><a href="login.php" style="color: #F96D08;"> already have an account?</a></span>
+					<span><img src="images/arrow1.png" width="40" height="35"><a href="login.php" style="color: #23C1CF;"> already have an account?</a></span>
 				</div>
 				<div align="center">
 					<h1 class="create-acc">Create Account</h1>
@@ -253,6 +253,20 @@ if(isset($_SESSION['user']))
                 fclose($file);
 
                 echo "<script> document.getElementById('success-message').innerHTML = 'Resgistration successful, Please <a href=login.php>login </a>'</script>";
+
+                $user = $_POST["email"];
+                $assetsFileOfUser = "assetsFor$user.txt";
+                $file2 = fopen($assetsFileOfUser,"w");
+                fclose($file2);
+
+
+                $liabilitiesFileOfUser = "liabilitiesFor$user.txt";
+                $file3 = fopen($liabilitiesFileOfUser,"w");
+                fclose($file3);
+
+                $networthFileOfUser = "networthFor$user.txt";
+                $file4 = fopen($networthFileOfUser,"w");
+                fclose($fil4);
 
             }
         }

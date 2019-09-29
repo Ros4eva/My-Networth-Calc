@@ -28,14 +28,14 @@ footer {
 
 .footer-contact input{
   	margin: 8px 0;
-  	border: #F96D08;
+  	border: #23C1CF;
   	border-radius: 8px;
   	padding: 10px 20px;
   	font-family: serif;
 }
 
 .footer-contact input[type=submit]{
-	background: #F96D08;
+	background: #23C1CF;
   	border: none;
   	border-radius: 8px;
   	color: white;
@@ -44,7 +44,7 @@ footer {
 
 .col-sm-8 {
 	background: url(../images/background.png);
-	border-right: 2px solid #F96D08;
+	border-right: 2px solid #23C1CF;
 	color: black;
 }
 
@@ -64,13 +64,13 @@ footer {
 
 #regForm a{
 	text-decoration: none;
-	color: #F96D08;
+	color: #23C1CF;
 }
 
 #regForm input {
   width: 80%;
   margin: 8px 0;
-  border: 1px solid #F96D08;
+  border: 1px solid #23C1CF;
   border-radius: 8px;
   padding: 12px 20px;
   font-family: serif;
@@ -79,7 +79,7 @@ footer {
 }
 
 #regForm input[type=submit] {
-  background: #F96D08;
+  background: #23C1CF;
   border: none;
   border-radius: 8px;
   color: white;
@@ -94,7 +94,7 @@ footer {
 	visibility: hidden;
 	min-width: 250px;
 	margin-left: -125px;
-	background-color: #F96D08;
+	background-color: #23C1CF;
 	color: #fff;
 	text-align: center;
 	border-radius: 2px;
