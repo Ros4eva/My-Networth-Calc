@@ -144,9 +144,11 @@ else
     <!--Dashboard starts here
     =============================-->
     <div class="dashboard__wrapper">
+
         <div class="dashboard__left">
             <img src="images/profile1.png" class="profile-img" alt="">
            <ul>
+            
                <a href="#" onclick="showDashboard()"><li>Dashboard</li></a>
                <a href="#" onclick="showAssets()"><li>Assets</li></a>
                <a href="#" onclick="showLiabilities()"><li>Liabilities</li></a>
@@ -158,6 +160,8 @@ else
            </ul>
         
         </div>
+        
+        
         <div class="dashboard__right">
             <div class="top__wrapper">
                 
@@ -273,28 +277,29 @@ else
                     <small>These are the things that takes money away from you. Try to limit them.</small>
                     <div class="liabilities__card">
                             <div class="liability__contents">
-                                    <h5>Debts</h5>
+                                    <label>Debts</label>
                                     <input type="number" name="debts" value="00">
                                 </div>
                                 <div class="liability__contents">
-                                        <h5>Bills Due</h5>
+                                        <label>Bills Due</label>
                                         <input type="number" name="bills" value="00">
                                     </div>
                                     <div class="liability__contents">
-                                        <h5>Other Debts</h5>
+                                        <label>Other Debts</label>
                                         <input type="number" name="otherDebts" value="00">
-                                    </div><br />
+                                    </div>
                                 <div class="liability__contents">
                                         <input type="submit" name="calLiab" class="liabilities__btn" value="Calculate Total Liabilities">
-                                        <h4 style="color: grey;">
+                                      </div><br>
+                                        <p style="color: grey;">
                                             <?php 
                                             $user = $_SESSION['user'];
                                             $liabilitiesFileOfUser = "liabilitiesFor$user.txt";
                                             $file = fopen($liabilitiesFileOfUser,"r");
                                             echo "You currently have ".fgets($file). " in Liabilities";
                                             ?>
-                                          </h4>
-                                    </div>
+                                          </p>
+                                    
                     </div>
                   </form>
             </div>

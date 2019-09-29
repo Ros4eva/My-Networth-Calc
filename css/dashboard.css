@@ -4,6 +4,14 @@
     box-sizing: border-box;
 	
 }
+
+* input[type=submit] {
+    background:#23C1CF;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
 body {
 	min-height: 100vh;
 	min-width: 100vw;
@@ -50,15 +58,6 @@ footer {
   	cursor: pointer;
 }
 
-
-@media screen and (max-width: 500px) {
-body {
-	min-height: 100vh;
-	min-width: 100vw;
-	 
-}
-
-}
 /*New UPDATE STARTS FROM HERE (ACHILLIS CODE)
 */
 
@@ -85,7 +84,8 @@ ul{
     grid-template-columns: 300px 1fr;
     /* grid-gap: 20px; */
     
-}.dashboard__left{
+}
+.dashboard__left{
     background: #23C1CF;
     color: white;
     height: 100vh;
@@ -294,5 +294,75 @@ ul{
         color:#4A5254;
     }
 
+@media screen and (max-width: 400px) {
+body {
+    
+    overflow-x: hidden;
+    line-height: 1.4;
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+     
+}
 
+.assets__wrapper, .assets__contents, .liabilities__wrapper, .networth__wrapper{
+  display: block;
+}
+
+.dashboard__left {
+    display: none;
+}
+
+.dashboard__right__contents{
+    width: 100vw;
+    
+}
+
+.dashboard__right__contents h3{
+    width: 100vw;
+
+    color:#4A5254;
+}
+
+.financial__info{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+        grid-gap: 15px;
+        margin-top: 1rem;
+}
+
+.calculate__btn, {
+    background: #BFEEF7;
+    border:none;
+    padding: .6rem 3rem;
+    cursor: pointer;
+    color:#4A5254;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.liability__contents{
+    margin-right: 6px;
+}
+
+.assets__contents h5, .liability__contents label{
+    color:#4A5254;
+    padding: 8px;
+}
+
+.liabilities__card, .worth__contents{
+    max-width: 300px;
+    margin-top: 3rem;
+}
+
+.liabilities__wrapper, .networth__wrapper{
+    margin: 10px;
+}
+
+.assets__form{
+    border-right: none;
+    /* height: 50%; */
+}
+
+
+}
 

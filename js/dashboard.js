@@ -30,3 +30,4 @@ showWorth = function(){
     liablities.style.display = "none";
     worth.style.display = "block";
 }
+
